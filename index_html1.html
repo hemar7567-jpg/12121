@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Echipamente profesionale pentru spălătorii auto AWE. Soluții la cheie în România, Moldova și Ucraina. Construiește-ți afacerea cu noi!">
+    <meta name="keywords" content="spalatorie auto, echipamente spalatorie, AWE, auto wash equipment, spalatorie la cheie, Moldova, Romania, Ukrain">
+    <meta name="author" content="AWE - Alpha Wash Equipment">
+
+    <!-- Mobile optimization -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#0a0a0a">
+
+    <meta property="og:title" content="AWE - Spalatorie Auto Pe Cheie">
+    <meta property="og:description" content="Echipamente profesionale în România, Moldova și Ucraina.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://твой-сайт.vercel.app">
+    <title>AWE - Spalatorie Auto Pe Cheie | Romania, Moldova, Ukraine</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            min-height: 100dvh; /* Dynamic viewport height for mobile */
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:rgb(0,229,255);stop-opacity:0.1" /><stop offset="100%" style="stop-color:rgb(255,0,128);stop-opacity:0.1" /></linearGradient></defs><rect width="1200" height="800" fill="url(%23grad1)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .video-bg {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            width: 50%;
+            height: 80%;
+            background: linear-gradient(45deg, #00e5ff, #ff0080);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #fff;
+            opacity: 0.8;
+            box-shadow: 0 0 60px rgba(0, 229, 255, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            padding: 40px;
+            text-align: left;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 8vw, 7rem);
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: neonGlow 2s ease-in-out infinite alternate;
+            text-shadow:
+                0 0 10px #00e5ff,
+                0 0 20px #00e5ff,
+                0 0 30px #00e5ff,
+                0 0 40px #00e5ff;
+            line-height: 1.1;
+        }
+
+        @keyframes neonGlow {
+            from {
+                text-shadow:
+                    0 0 10px #00e5ff,
+                    0 0 20px #00e5ff,
+                    0 0 30px #00e5ff,
+                    0 0 40px #00e5ff;
+            }
+            to {
+                text-shadow:
+                    0 0 20px #00e5ff,
+                    0 0 30px #00e5ff,
+                    0 0 40px #00e5ff,
+                    0 0 50px #00e5ff,
+                    0 0 60px #00e5ff;
+            }
+        }
+
+        .hero h2 {
+            font-size: clamp(1rem, 3vw, 2rem);
+            margin-bottom: 40px;
+            color: #ddd;
+            font-weight: 300;
+            max-width: 700px;
+            line-height: 1.5;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 18px 36px;
+            font-size: clamp(0.9rem, 2vw, 1.2rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            touch-action: manipulation;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn-orange {
+            background: linear-gradient(45deg, #ff6600, #ff9900);
+            color: #fff;
+            box-shadow: 0 0 30px rgba(255, 102, 0, 0.6);
+        }
+
+        .btn-orange:hover, .btn-orange:active {
+            transform: translateY(-3px);
+            box-shadow: 0 0 50px rgba(255, 102, 0, 0.9);
+        }
+
+        .btn-blue {
+            background: linear-gradient(45deg, #00a8ff, #00e5ff);
+            color: #fff;
+            box-shadow: 0 0 30px rgba(0, 229, 255, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-blue:hover, .btn-blue:active {
+            transform: translateY(-3px);
+            box-shadow: 0 0 50px rgba(0, 229, 255, 0.9);
+        }
+
+        /* Geography Section */
+        .geography {
+            padding: 60px 20px;
+            background: #0f0f1e;
+        }
+
+        .geo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .geo-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(0, 229, 255, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            touch-action: manipulation;
+        }
+
+        .geo-card:active {
+            transform: scale(0.98);
+        }
+
+        @media (hover: hover) {
+            .geo-card:hover {
+                transform: translateY(-10px);
+                border-color: #00e5ff;
+                box-shadow: 0 0 40px rgba(0, 229, 255, 0.4);
+            }
+        }
+
+        .geo-card .flag {
+            font-size: clamp(3rem, 8vw, 4rem);
+            margin-bottom: 20px;
+        }
+
+        .geo-card h3 {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            margin-bottom: 15px;
+            color: #00e5ff;
+        }
+
+        .geo-card .phone {
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            color: #fff;
+            font-weight: 700;
+            animation: pulse 2s ease-in-out infinite;
+            word-break: break-word;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        @media (hover: hover) {
+            .geo-card:hover .phone {
+                animation: pulseBright 0.5s ease-in-out infinite;
+            }
+        }
+
+        @keyframes pulseBright {
+            0%, 100% {
+                text-shadow: 0 0 10px #00e5ff;
+            }
+            50% {
+                text-shadow: 0 0 30px #00e5ff, 0 0 50px #00e5ff;
+            }
+        }
+
+        /* Why Us Section */
+        .why-us {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1e 100%);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(2rem, 5vw, 4rem);
+            margin-bottom: 60px;
+            text-transform: uppercase;
+            color: #00e5ff;
+            letter-spacing: 2px;
+        }
+
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(0, 229, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:active {
+            transform: scale(0.98);
+        }
+
+        @media (hover: hover) {
+            .feature-card:hover {
+                transform: translateY(-10px);
+                border-color: #00e5ff;
+                box-shadow: 0 0 40px rgba(0, 229, 255, 0.3);
+            }
+        }
+
+        .feature-icon {
+            font-size: clamp(3rem, 8vw, 4rem);
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: clamp(1.3rem, 3vw, 1.8rem);
+            margin-bottom: 15px;
+            color: #00e5ff;
+        }
+
+        .feature-card p {
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* Before/After Section */
+        .before-after {
+            padding: 80px 20px;
+            background: #0a0a0a;
+        }
+
+        .slider-container {
+            max-width: 900px;
+            margin: 0 auto;
+            height: 500px;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 50px rgba(0, 229, 255, 0.3);
+            touch-action: none;
+        }
+
+        .slider-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 900;
+            text-align: center;
+        }
+
+        .before-image {
+            background: linear-gradient(135deg, #333 0%, #111 100%);
+            color: #ff0000;
+        }
+
+        .after-image {
+            background: linear-gradient(135deg, #00e5ff 0%, #0080ff 100%);
+            color: #fff;
+            clip-path: inset(0 50% 0 0);
+        }
+
+        .slider-handle {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 6px;
+            height: 100%;
+            background: #fff;
+            cursor: ew-resize;
+            z-index: 10;
+            touch-action: none;
+        }
+
+        .slider-handle::before {
+            content: '⬌';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .slider-label {
+            position: absolute;
+            top: 20px;
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            font-weight: 700;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            border-radius: 10px;
+            z-index: 5;
+        }
+
+        .label-before {
+            left: 20px;
+        }
+
+        .label-after {
+            right: 20px;
+        }
+
+        /* Catalog Section */
+        .catalog {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1e 100%);
+        }
+
+        .products-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 0 20px;
+        }
+
+        .product-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(0, 229, 255, 0.3);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .product-card:active {
+            transform: scale(0.98);
+        }
+
+        @media (hover: hover) {
+            .product-card:hover {
+                transform: translateY(-10px);
+                border-color: #00e5ff;
+                box-shadow: 0 0 50px rgba(0, 229, 255, 0.4);
+            }
+        }
+
+        .product-video {
+            height: 250px;
+            background: linear-gradient(45deg, #00e5ff, #ff0080);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            padding: 20px;
+        }
+
+        .product-info {
+            padding: 30px;
+        }
+
+        .product-info h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            margin-bottom: 15px;
+            color: #00e5ff;
+        }
+
+        .product-info p {
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            color: #ccc;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .product-price {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 900;
+            color: #ff6600;
+            margin-bottom: 20px;
+        }
+
+        .btn-buy {
+            width: 100%;
+            padding: 18px;
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            background: linear-gradient(45deg, #ff6600, #ff9900);
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 30px rgba(255, 102, 0, 0.5);
+            touch-action: manipulation;
+        }
+
+        .btn-buy:active {
+            transform: scale(0.98);
+        }
+
+        @media (hover: hover) {
+            .btn-buy:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 0 50px rgba(255, 102, 0, 0.8);
+            }
+        }
+
+        /* Footer */
+        footer {
+            padding: 80px 20px;
+            background: #0a0a0a;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-contacts {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .footer-contact {
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            border: 2px solid rgba(0, 229, 255, 0.3);
+        }
+
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 20px 0;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+                letter-spacing: 1px;
+            }
+
+            .hero h2 {
+                font-size: 1rem;
+            }
+
+            .video-bg {
+                width: 100%;
+                height: 200px;
+                position: relative;
+                margin-top: 30px;
+                transform: none;
+                top: auto;
+                right: auto;
+                font-size: 16px;
+                padding: 20px;
+            }
+
+            .hero-content {
+                padding: 20px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+                padding: 16px 24px;
+                justify-content: center;
+            }
+
+            .slider-container {
+                height: 300px;
+            }
+
+            .slider-handle::before {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+
+            .features-grid,
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .geo-container {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                margin-bottom: 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .feature-card,
+            .product-info {
+                padding: 25px 20px;
+            }
+
+            .slider-container {
+                height: 250px;
+            }
+        }
+
+        /* Landscape mobile */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .hero {
+                min-height: auto;
+                padding: 40px 0;
+            }
+
+            .video-bg {
+                display: none;
+            }
+        }
+
+        /* High DPI screens */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            body {
+                -webkit-font-smoothing: subpixel-antialiased;
+            }
+        }
+
+        /* Prevent text size adjustment on orientation change */
+        @media screen and (orientation: portrait) {
+            html {
+                -webkit-text-size-adjust: 100%;
+            }
+        }
+
+        @media screen and (orientation: landscape) {
+            html {
+                -webkit-text-size-adjust: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="video-bg">
+            📹 МЕСТО ДЛЯ ВАШЕГО ВИДЕО С TIKTOK<br>
+            (Добавьте видео после скачивания)
+        </div>
+        <div class="hero-content">
+            <h1>SPALATORIE<br>AUTO PE CHEIE</h1>
+            <h2>Построй прибыльный бизнес с профессиональным оборудованием AWE. Работаем в Romania, Moldova, Ukraine</h2>
+            <div class="cta-buttons">
+                <a href="#catalog" class="btn btn-orange">ВЫБРАТЬ КОМПЛЕКТ</a>
+                <a href="https://t.me/alphawashequipment" class="btn btn-blue" target="_blank" rel="noopener noreferrer">
+                    ✈️ СВЯЗАТЬСЯ В TELEGRAM
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Geography -->
+    <section class="geography">
+        <div class="geo-container">
+            <div class="geo-card" onclick="window.location.href='tel:+373-6969-1989'">
+                <div class="flag">🇷🇴</div>
+                <h3>Romania</h3>
+                <p class="phone">Contactați-ne</p>
+            </div>
+            <div class="geo-card" onclick="window.location.href='tel:+373-6969-1989'">
+                <div class="flag">🇲🇩</div>
+                <h3>Moldova</h3>
+                <p class="phone">+373 6969 1989</p>
+            </div>
+            <div class="geo-card" onclick="window.location.href='tel:+380-9898-10535'">
+                <div class="flag">🇺🇦</div>
+                <h3>Ukraine</h3>
+                <p class="phone">+380 9898 10535</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us -->
+    <section class="why-us">
+        <h2 class="section-title">ПОЧЕМУ МЫ?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚡️</div>
+                <h3>МОЩЬ</h3>
+                <p>Давление, которое отмывает невозможное. Профессиональное оборудование высокого класса.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💎</div>
+                <h3>КАЧЕСТВО</h3>
+                <p>Оборудование, которое не подводит. Надежность и долговечность от AWE.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🚀</div>
+                <h3>ПОД КЛЮЧ</h3>
+                <p>От проекта до первого клиента. Полное сопровождение вашего бизнеса.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3>ПРИБЫЛЬ</h3>
+                <p>Быстрая окупаемость и стабильный доход. Инвестиция в успешное будущее.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After -->
+    <section class="before-after">
+        <h2 class="section-title">РЕЗУЛЬТАТ НАШЕЙ РАБОТЫ</h2>
+        <div class="slider-container" id="slider">
+            <div class="slider-image before-image">
+                ГРЯЗНО<br>❌
+            </div>
+            <div class="slider-image after-image" id="afterImage">
+                ИДЕАЛЬНО<br>✨
+            </div>
+            <div class="slider-handle" id="sliderHandle"></div>
+            <div class="slider-label label-before">ДО</div>
+            <div class="slider-label label-after">ПОСЛЕ</div>
+        </div>
+    </section>
+
+    <!-- Catalog -->
+    <section class="catalog" id="catalog">
+        <h2 class="section-title">TOP SELLERS</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-video">
+                    📹 ВИДЕО ПРОДУКТА 1<br>
+                    (Добавьте с TikTok)
+                </div>
+                <div class="product-info">
+                    <h3>Комплект СТАНДАРТ</h3>
+                    <p>Идеальное решение для начинающих. Все необходимое оборудование для старта бизнеса.</p>
+                    <div class="product-price">€4,999</div>
+                    <button class="btn-buy" onclick="contactUs()">КУПИТЬ</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-video">
+                    📹 ВИДЕО ПРОДУКТА 2<br>
+                    (Добавьте с TikTok)
+                </div>
+                <div class="product-info">
+                    <h3>Комплект ПРОФИ</h3>
+                    <p>Расширенная комплектация для профессионалов. Максимальная производительность.</p>
+                    <div class="product-price">€7,999</div>
+                    <button class="btn-buy" onclick="contactUs()">КУПИТЬ</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-video">
+                    📹 ВИДЕО ПРОДУКТА 3<br>
+                    (Добавьте с TikTok)
+                </div>
+                <div class="product-info">
+                    <h3>Комплект ПРЕМИУМ</h3>
+                    <p>Топовая комплектация "под ключ". Полный пакет для масштабного бизнеса.</p>
+                    <div class="product-price">€12,999</div>
+                    <button class="btn-buy" onclick="contactUs()">КУПИТЬ</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h2 class="section-title">СВЯЖИТЕСЬ С НАМИ</h2>
+            <div class="footer-contacts">
+                <div class="footer-contact">
+                    <strong>🇲🇩 Moldova</strong><br>
+                    <a href="tel:+373-6969-1989" style="color: #00e5ff; text-decoration: none;">+373 6969 1989</a>
+                </div>
+                <div class="footer-contact">
+                    <strong>🇺🇦 Ukraine</strong><br>
+                    <a href="tel:+380-9898-10535" style="color: #00e5ff; text-decoration: none;">+380 9898 10535</a>
+                </div>
+            </div>
+            <a href="https://t.me/alphawashequipment" class="btn btn-blue" target="_blank" rel="noopener noreferrer">
+                ✈️ ПЕРЕЙТИ В ЧАТ TELEGRAM
+            </a>
+            <p style="margin-top: 40px; color: #666;">© 2026 AWE - Alpha Wash Equipment. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Before/After Slider with improved mobile support
+        const slider = document.getElementById('slider');
+        const sliderHandle = document.getElementById('sliderHandle');
+        const afterImage = document.getElementById('afterImage');
+
+        let isDragging = false;
+
+        function updateSlider(clientX) {
+            const rect = slider.getBoundingClientRect();
+            const x = clientX - rect.left;
+            const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
+            
+            sliderHandle.style.left = percentage + '%';
+            afterImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+        }
+
+        // Mouse events
+        sliderHandle.addEventListener('mousedown', (e) => {
+            e.preventDefault();
+            isDragging = true;
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            updateSlider(e.clientX);
+        });
+
+        // Touch events with improved handling
+        sliderHandle.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            isDragging = true;
+        }, { passive: false });
+
+        document.addEventListener('touchend', () => {
+            isDragging = false;
+        });
+
+        document.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            e.preventDefault();
+            updateSlider(e.touches[0].clientX);
+        }, { passive: false });
+
+        // Click/tap to move slider
+        slider.addEventListener('click', (e) => {
+            if (e.target === sliderHandle) return;
+            updateSlider(e.clientX);
+        });
+
+        slider.addEventListener('touchstart', (e) => {
+            if (e.target === sliderHandle) return;
+            updateSlider(e.touches[0].clientX);
+        }, { passive: true });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Contact function for mobile
+        function contactUs() {
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            
+            if (isMobile) {
+                // Show options on mobile
+                const choice = confirm('Выберите способ связи:\nOK - Telegram\nОтмена - Позвонить');
+                if (choice) {
+                    window.open('https://t.me/alphawashequipment', '_blank');
+                } else {
+                    window.location.href = 'tel:+373-6969-1989';
+                }
+            } else {
+                alert('Свяжитесь с нами:\n\nMoldova: +373 6969 1989\nUkraine: +380 9898 10535\n\nили через Telegram: @alphawashequipment');
+            }
+        }
+
+        // Prevent zoom on double tap for iOS
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', (e) => {
+            const now = Date.now();
+            if (now - lastTouchEnd <= 300) {
+                e.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, { passive: false });
+
+        // Optimize animations for mobile
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        if (prefersReducedMotion.matches) {
+            document.querySelectorAll('*').forEach(el => {
+                el.style.animation = 'none';
+                el.style.transition = 'none';
+            });
+        }
+
+        // Add viewport height fix for mobile browsers
+        function setVH() {
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+        setVH();
+        window.addEventListener('resize', setVH);
+        window.addEventListener('orientationchange', setVH);
+    </script>
+</body>
+</html>
